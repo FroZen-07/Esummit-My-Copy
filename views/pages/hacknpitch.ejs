@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>HackNPitch | JU E-Summit 2021</title>
+  <%- include('../partials/head2'); %>
+
+  <!-- include the header for accurate color -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+  <!-- Custom styles for this template -->
+  <link href="../assets/css/navBar.css" rel="stylesheet">
+  <link href="../assets/css/carousel.css" rel="stylesheet">
+  <link href="../assets/css/heroes.css" rel="stylesheet">
+  <link href="../assets/css/features.css" rel="stylesheet">
+  <link href="../assets/css/timeline-launchx.css" rel="stylesheet">
+
+
+  <style>
+    .timeline{
+  position:relative;
+  margin:50px auto;
+  padding:40px 0;
+  width:1000px;
+  box-sizing:border-box;
+}
+.timeline:before{
+  content:'';
+  position:absolute;
+  left:50%;
+  width:2px;
+  height:100%;
+  background:#c5c5c5;
+}
+.timeline ul{
+  padding:0;
+  margin:0;
+}
+.timeline ul li{
+  list-style:none;
+  position:relative;
+  width:50%;
+  padding:20px 40px;
+  box-sizing:border-box;
+}
+.timeline ul li:nth-child(odd){
+  float:left;
+  text-align:right;
+  clear:both;
+}
+.timeline ul li:nth-child(even){
+  float:right;
+  text-align:left;
+  clear:both;
+}
+.content{
+  padding-bottom:20px;
+}
+.timeline ul li:nth-child(odd):before
+{
+  content:'';
+  position:absolute;
+  width:10px;
+  height:10px;
+  top:24px;
+  right:-6px;
+  background:rgb(24, 228, 71);
+  border-radius:50%;
+  box-shadow:0 0 0 3px rgba(84, 252, 1, 0.2);
+}
+.timeline ul li:nth-child(even):before
+{
+  content:'';
+  position:absolute;
+  width:10px;
+  height:10px;
+  top:24px;
+  left:-4px;
+  background:rgb(46, 210, 238);
+  border-radius:50%;
+  box-shadow:0 0 0 3px rgba(0, 234, 250, 0.2);
+}
+.timeline ul li h3{
+  padding:0;
+  margin:0;
+  color:#ffc107;
+  font-weight:300;
+}
+.timeline ul li p{
+  margin:10px 0 0;
+  padding:0;
+}
+.timeline ul li .time h4{
+  margin:0;
+  padding:0;
+  font-size:14px;
+}
+.timeline ul li:nth-child(odd) .time
+{
+  position:absolute;
+  top:12px;
+  right:-165px;
+  margin:0;
+  padding:8px 16px;
+  background:#08d8ab;
+  color:rgb(0, 0, 0);
+  border-radius:18px;
+  box-shadow:0 0 0 3px rgba(237, 208, 92, 0);
+}
+.timeline ul li:nth-child(even) .time
+{
+  position:absolute;
+  top:12px;
+  left:-165px;
+  margin:0;
+  padding:8px 16px;
+  background:#0a4449;
+  color:white;
+  border-radius:18px;
+  box-shadow:0 0 0 3px rgba(237, 208, 92, 0);
+}
+@media(max-width:1000px)
+{
+  .timeline{
+    width:100%;
+  }
+}
+@media(max-width:767px){
+  .timeline{
+    width:100%;
+    padding-bottom:0;
+  }
+  h1{
+    font-size:40px;
+    text-align:center;
+  }
+  .timeline:before{
+    left:20px;
+    height:100%;
+  }
+  .timeline ul li:nth-child(odd),
+  .timeline ul li:nth-child(even)
+  {
+    width:100%;
+    text-align:left;
+    padding-left:50px;
+    padding-bottom:50px;
+  }
+  .timeline ul li:nth-child(odd):before,
+  .timeline ul li:nth-child(even):before
+  {
+    top:-18px;
+    left:16px;
+  }
+  .timeline ul li:nth-child(odd) .time,
+  .timeline ul li:nth-child(even) .time{
+    top:-30px;
+    left:50px;
+    right:inherit;
+  }
+}
+
+.text {
+	text-transform: uppercase;
+	background: linear-gradient(to right, #028B6E 0%, #023B40 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	
+}
+
+  </style>
+
+</head>
+
+<body style="background-color: rgb(0, 0, 0) !important;">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NTJ8BSG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {},
+      Tawk_LoadStart = new Date();
+    (function() {
+      var s1 = document.createElement("script"),
+        s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/612891ed649e0a0a5cd33159/1fe37k2kk';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+
+  
+  <!--End of Tawk.to Script-->
+
+
+  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light" aria-label="Main navigation">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="../assets/images/blue_grad_logo.png" width="160" height="30" alt="">
+      </a>
+      <a href="https://portal.juecell.in/" target="blank"><button class="btn btn-outline-primary btn-sm" type="button" id="register_button" aria-label="Toggle navigation">
+          Pre-Register Now
+        </button></a>
+
+      <!-- <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+
+      <!-- <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Notifications</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Switch account</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
+                                aria-expanded="false">Settings</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div> -->
+    </div>
+  </nav>
+
+  <!-- <div class="nav-scroller bg-dark shadow-sm">
+            <nav class="nav nav-underline" aria-label="Secondary navigation">
+                <a class="nav-link active" aria-current="page" href="/">Explore</a>
+                <a class="nav-link" href="/legacy">Legacy</a>
+                <a class="nav-link" href="/events">
+                    Events
+                    <span class="badge bg-light text-dark rounded-pill align-text-bottom">5</span>
+                </a>
+                <a class="nav-link" href="/schedule">Schedule</a>
+                <a class="nav-link" href="/sponsors">Sponsors</a>
+                <a class="nav-link" href="latest">Latest</a>
+                <a class="nav-link" href="/ca">Campus Ambassador Program</a>
+                <a class="nav-link" href="/contact">Contact</a>
+            </nav>
+        </div> -->
+
+  <%- include('../partials/navScroller'); %>
+
+
+  <%- include('../partials/svgSymbols'); %>
+
+
+  <!-- Carousel starts -->
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        
+        <img src="https://res.cloudinary.com/ju-ecell/image/upload/v1630332358/HacknPitch/HackNPitch_Banner_2560x1080_alh6ew.png" width="100%">
+
+        
+
+
+      </div>
+
+
+
+    </div>
+    <!-- Carousel ends -->
+
+
+
+    <!-- Showcase Intro  -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="row  align-items-center justify-content-between">
+          <div class="col-md">
+            <img src="../assets/images/HackNPitch/Slightly_less_sus_i0ie0g.png"   style="border-radius: 12px !important;" alt="Join Us">
+          </div>
+
+          <div class="col-md py-5 align-items-center text-center text-sm-start text-light">
+            <h3 class="display-6 ">BUILD FOR <span class="text-warning">INNOVATION</span></h3>
+            <p class="lead mt-3">
+              To all the techpreneurs out there, here is your perfect opportunity to deal with real time Industrial problems and give wings to your imagination power providing the most innovative solution in due course. We present to you HackNPitch, which provides the perfect ground to network & teamwork for tech-driven entrepreneurs & students.
+            </p>
+
+            <!-- <a href="#know" class="btn btn-outline-warning btn-lg mt-3">
+              Know More
+            </a> -->
+            <a href="https://portal.juecell.in/" class="btn btn-warning btn-lg mt-3">
+              Pre-Register Now
+            </a>
+           
+
+
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Section -->
+
+    <section class="text-light text-center text-sm-start" id="know" style="
+    position: relative;
+    width: 100%;
+    
+    background-image: linear-gradient(
+     rgba(0, 0, 0, 0.5),
+     rgba(0, 0, 0, 0.5)
+   ), url(../assets/images/HackNPitch/Pattern_transparent_bg_fxkcdz.png);
+     background-repeat: no-repeat;
+     background-size: cover;">
+      <div class="container">
+        <div class="d-md-flex aling-items-center justify-content-between">
+          <div>
+            <h1 class="display-5 fw-bold">All About <span class="text-warning">HackNPitch:</span></h1>
+            <p class="lead text-light my-5"> Before the pandemic began, the new <span class="text-warning">"talk of the town" </span> in Kolkata and beyond was the former's first ever overnight hackathon. This year, with the unending possibilities of the virtual medium, <span class="text-warning">HackNPitch is back!</span> <br>
+
+              To all the aspiring technopreneurs out there, here is your perfect opportunity to deal with a real time Industrial problem and give wings to your imagination providing the most innovative solution in due course. <br>
+
+              With the opportunity to win accolades that consist of cash prizes, schwag and other glittering tangibles, HackNPitch will also provide you and your team the perfect platform to network and get exposure with the stalwarts of the industry. <br>
+
+              <span class="text-warning">Learn while doing</span>, from experts and friends, all of it right from the comfort of your room!
+
+            </p>
+            <div 
+            class="apply-button" 
+            data-hackathon-slug="hacknpitch" 
+            data-button-theme="light"
+            style="height: 44px; width: 312px"
+        ></div>
+        <h6 class="text-light">(Applications starting from 4th Sep)</h6>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Boxes -->
+
+    <section class="p-5">
+      <div class="container">
+        <h2 class="text-center text-light mb-5 fw-bold display-5">Why should you <span class="text-warning">ATTEND?</span></h2>
+        <div class="row text-center g-4">
+          <!-- <div class="col-md">
+            <div class="card bg-warning text-dark">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-display"></i>
+                </div>
+                <h3 class="card-title mb-3">
+                  30 Hours Long Hackathon
+                </h3>
+                <p class="card-text">
+                  Second overnight 30-hours long Hackathon in a college in Kolkata
+                </p>
+
+              </div>
+            </div>
+          </div> -->
+
+          <div class="col-md">
+            <div class="card text-dark">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-lightbulb"></i>
+                </div>
+                <h3 class="card-title mb-3">
+                  Top-notch Collaboration
+                </h3>
+                <p class="card-text">
+                  Top-notch collaborators for the event from all across the globe
+                </p>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="card bg-warning text-dark">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-people-fill"></i>
+                </div>
+                <h3 class="card-title mb-3">
+                  Uniting The Community
+                </h3>
+                <p class="card-text">
+                  Platform for uniting the coding community in and around Kolkata
+                </p>
+
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md">
+            <div class="card  text-dark">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-gear-fill"></i>
+                </div>
+                <h3 class="card-title mb-3">
+                  Perks!!! and Experience
+                </h3>
+                <p class="card-text">
+                  Chance to win amazing prizes and/or goodies
+                </p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- Sponsors starts -->
+
+    <div class="album py-5 ">
+      <div class="container">
+        <h2 class="text-center my-5 fw-bold display-5 text-light">Partners and<span class="text-warning"> Sponsors</span></h2>
+        <div class="row g-3 row-cols-1 row-cols-sm-3 row-cols-md-4 align-items-center justify-content-around">
+          <div class="col p-5">
+            <a href="https://flipitnews.com/" target="blank" rel="noopener noreferrer">
+              <img src="../assets/images/HackNPitch/FlipItNews Full Logo.png" class="w-100">
+            </a>
+            
+        </div>
+          <div class="col p-5">
+            <a href="https://www.oreilly.com/" target="blank" rel="noopener noreferrer">
+              <img src="../assets/images/HackNPitch/OReilly_logo_rgb.png" class="w-100">
+            </a>
+            
+          </div>
+          <div class="col p-5">
+            <a href="https://www.wolfram.com/" target="blank" rel="noopener noreferrer">
+              <img src="../assets/images/HackNPitch//1200px-WolframCorporateLogo.svg.png" class="w-100">
+            </a>
+            
+          </div>
+          
+          <div class="col p-5">
+            <a href="https://devfolio.co" target="blank" rel="noopener noreferrer">
+              <img src="../assets/images/HackNPitch/Devfolio_Logo-White.png" class="w-100">
+            </a>
+            
+        </div>
+          
+
+
+
+
+        </div>
+
+
+        <div class="row g-3 row-cols-1 row-cols-sm-3 row-cols-md-4 align-items-center justify-content-around">
+
+          
+          
+          <div class="col p-5">
+            <a href="https://polygon.technology/" target="blank" rel="noopener noreferrer">
+              <img src="../assets/images/HackNPitch/Polygon_Logo-White.png" class="w-100">
+            </a>
+            
+          </div>
+          <div class="col p-5">
+            <a href="https://tezos.com/" target="blank" rel="noopener noreferrer">
+              <img src="../assets/images/HackNPitch/Tezos_Logo-White.png" class="w-100">
+            </a>
+            
+          </div>
+          <div class="col p-5">
+            <a href="https://celo.org/" target="blank" rel="noopener noreferrer">
+              <img src="../assets/images/HackNPitch/Celo Logo Monochrome Reverse.png" class="w-100">
+            </a>
+            
+          </div>
+          <div class="col p-5">
+            <a href="https://filecoin.io/" target="blank" rel="noopener noreferrer">
+              <img src="../assets/images/HackNPitch/Filecoin Coloured White Text-1.png" class="w-100">
+            </a>
+            
+          </div>
+          
+          
+
+
+
+
+        </div>
+
+
+        <div class="row g-3 row-cols-1 row-cols-sm-3 row-cols-md-4 align-items-center justify-content-around">
+          <div class="col p-5">
+            <a href="https://rosenfeldmedia.com/" target="blank" rel="noopener noreferrer">
+              <img src="../assets/images/HackNPitch/RM-Logo_logotype.png" class="w-100">
+            </a>
+            
+          </div>
+
+          
+
+          <div class="col p-5">
+            <a href="https://streamyard.com/" target="blank" rel="noopener noreferrer">
+              <img src="../assets/images/HackNPitch/StreamYard.png" class="w-100">
+            </a>
+            
+          </div>
+          <div class="col p-5">
+            <a href="https://mic.gov.in/" target="blank" rel="noopener noreferrer">
+              <img src="../assets/images//Sponsors/MHRD-removebg-preview.png" class="w-100">
+            </a>
+            
+          </div>
+          <div class="col p-5">
+            <a href="https://www.startupindia.gov.in/" target="blank" rel="noopener noreferrer">
+              <img src="../assets/images/Sponsors/Startup_India-removebg-preview.png" class="w-100">
+            </a>
+            
+          </div>
+          
+
+
+
+
+        </div>
+
+
+        <div class="row g-3 row-cols-1 row-cols-sm-3 row-cols-md-4 align-items-center justify-content-around">
+          <div class="col p-5">
+          <a href="https://www.jetbrains.com/" target="blank" rel="noopener noreferrer">
+            <img src="../assets/images/HackNPitch/jetbrains.png" class="w-100">
+          </a>
+          
+        </div>
+          <div class="col p-5">
+            <a href="https://www.digitalocean.com/try/developer-brand?utm_campaign=apac_brand_kw_en_cpc&utm_adgroup=digitalocean_exact_exact&_keyword=digital%20ocean&_device=c&_adposition=&utm_content=conversion&utm_medium=cpc&utm_source=google&gclid=Cj0KCQjwg7KJBhDyARIsAHrAXaGcwJ6sIiklu4-gf5ILHlisrdDGINYmJA3eJy-0uVmxIyownwktAgwaAt2HEALw_wcB" target="blank" rel="noopener noreferrer">
+              <img src="../assets/images/HackNPitch/DO_Logo_Vertical_Blue.png" class="w-100">
+            </a>
+            
+          </div>
+          <div class="col p-5">
+            <a href="https://www.postman.com/" target="blank" rel="noopener noreferrer">
+              <img src="../assets/images/HackNPitch/poastman-removebg-preview.png" class="w-100">
+            </a>
+            
+          </div>
+          
+
+
+
+
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
+    <!-- Past Sponsors ends -->
+
+
+
+
+    <!-- Problem Statement -->
+
+    <div class="album my-5 py-5 ">
+      <div class="container">
+        <h2 class="text-center my-5 fw-bold display-5 text-light">Theme : <span class="text">Campus and Student Life</span></h2>
+        <!-- <div class="row g-3 row-cols-1 row-cols-sm-3 row-cols-md-4 align-items-center justify-content-around">
+          <div class="col px-5"> -->
+            <h5 class="display-6 text-center text-muted">Problem Statements Unveiling  Soon!!</h5>
+            
+        <!-- </div> -->
+          <!-- <div class="col px-5">
+            <img src="../assets/images/HackNPitch/OReilly_logo_rgb.png" class="w-100">
+          </div>
+          <div class="col px-5">
+            <img src="../assets/images/HackNPitch//1200px-WolframCorporateLogo.svg.png" class="w-100">
+          </div> -->
+          
+
+
+
+
+        <!-- </div> -->
+      </div>
+    </div>
+
+
+
+    <!-- Problem Statement Ends -->
+
+    <!-- Timeline section starts -->
+    <h2 class="text-center display-5 fw-bold py-3" style="color: white;"><span class="text-warning">Timeline</span> of the Event</h2>
+    <div class="timeline" style="color: white !important;">
+      
+
+      <ul>
+        <li>
+          <div class="content">
+            <h3 class="text-white">Opening Address <br> <br> Event Kickoff <br> <br> <span class="text-warning">Brainstroming </span>Begins</h3>
+            
+          </div>
+          <div class="time">
+            <h4>Sept 4 (Saturday)</h4>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h3 class="text-white">Prototype submission <span class="text-warning">ends</span></h3> 
+
+            
+          </div>
+          <div class="time">
+            <h4>Sept 12 (Sunday)</h4>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h3 class="text-white"><span class="text-warning">Hack Qualifiers</span> Announcement</h3>
+
+           
+          </div>
+          <div class="time">
+            <h4>Sept 13 (Monday)</h4>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h3 class="text-white">Hack <span class="text-warning">Begins</span></h3> 
+
+           
+          </div>
+          <div class="time">
+            <h4>Sept 14 (Tuesday)</h4>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h3 class="text-white">Hack <span class="text-warning">Ends</span></h3>
+
+          </div>
+          <div class="time">
+            <h4>Sept 24 (Friday)</h4>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h3 class="text-white">Pitch <span class="text-warning">Day 1</span></h3> 
+
+            
+          </div>
+          <div class="time">
+            <h4>Sept 25 (Saturday)</h4>
+          </div>
+        </li>
+        
+        <li>
+          <div class="content">
+            <h3 class="text-white">Pitch <span class="text-warning">Day 2 <br> <br> Final Result Declared</span> <br><br> Closing Note</h3> 
+
+           
+          </div>
+          <div class="time">
+            <h4>Sept 26 (Sunday)</h4>
+          </div>
+        </li>
+        
+       
+        <div style="clear:both;"></div>
+      </ul>
+    </div>
+    
+    <!-- <div class="container my-5">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card aling-items-center justify-content-between" style="background-color: black !important; color: white;">
+                  <div class="card-body">
+                    <h2 class="text-center display-5 fw-bold pb-5" style="color: white;"><span class="text-warning">Timeline</span> of the Event</h2>
+                  
+                       <div id="content">
+                          <ul class="timeline fw-bold">
+                              <li class="event text-warning" data-date="4 Sept (Saturday)">
+                                     <h3 class="text-white">Opening Address <br> <br> Event Kick Off <br> <span class="text-warning"> <br> Brainstorming Begins</span></h3>
+                                     
+                              </li>
+                              <li class="event text-warning" data-date="12 Sept (Sunday)">
+                                    <h3 class="text-white">Prototype submission <span class="text-warning">ends</span></h3> 
+                                    
+                               </li>
+                              <li class="event text-warning" data-date="13 Sept (Monday)">
+                                  <h3 class="text-white"><span class="text-warning">Hack Qualifiers</span> Announcement</h3>
+                                  
+                               </li>
+                              <li class="event text-warning" data-date="14 Sept (Tuesday)">
+                                  <h3 class="text-white">Hack <span class="text-warning">Begins</span></h3> 
+                          
+                               </li>
+                              <li class="event text-warning" data-date="24 Sept (Friday)">
+                                  <h3 class="text-white">Hack <span class="text-warning">Ends</span></h3>
+                                   
+                               </li>
+                              <li class="event text-warning" data-date="25 Sept (Saturday)">
+                                    <h3 class="text-white">Pitch <span class="text-warning">Day 1</span></h3> 
+                                    
+                                </li>
+                                <li class="event text-warning" data-date="26 Sept (Sunday)">
+                                  <h3 class="text-white">Pitch <span class="text-warning">Day 2 <br> <br> Final Result Declared</span> <br><br> Closing Note</h3> 
+                                  
+                              </li>
+                          </ul>
+                      </div> 
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div> -->
+    <!-- Timeline ends -->
+
+    <!-- Rewards start -->
+
+    <!-- <div class="container px-4 py-5 ">
+  <section id="instructors" class="p-5">
+    <div class="container justify-content-around">
+      <h2 class="text-center display-3 fw-bold pb-5"><span class="text-warning">Prizes </span><span class="text-light">and Rewards :</span></h2>
+      
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card" style="background-color: rgba(245, 245, 245, 0); ">
+            <div class="card-body text-center">
+              <img 
+                src="https://res.cloudinary.com/bitan-atarthy/image/upload/v1629918933/esummit/1st_ahtddg.png"
+                class="w-50 mb-3"
+                alt=""
+              />
+              <h3 class="card-title mb-3 text-light">1st Prize <br>The Winner</h3>
+              
+              
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card" style="background-color: rgba(245, 245, 245, 0); ">
+            <div class="card-body text-center">
+              <img
+                src="https://res.cloudinary.com/bitan-atarthy/image/upload/v1629918932/esummit/prize2_pcc7ew.png"
+                class="w-50 mb-3"
+                alt=""
+              />
+              <h3 class="card-title mb-3 text-light">2nd Prize <br>1st Runners Up</h3>
+              
+              
+              
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card" style="background-color: rgba(245, 245, 245, 0); ">
+            <div class="card-body text-center">
+              <img
+                src="https://res.cloudinary.com/bitan-atarthy/image/upload/v1629918929/esummit/prize4_uzphf6.png"
+                class="w-50 mb-3"
+                alt=""
+              />
+              <h3 class="card-title mb-3 text-light">3rd Prize <br>2nd Runners Up</h3>
+              
+              
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card" style="background-color: rgba(245, 245, 245, 0); ">
+            <div class="card-body text-center">
+              <img
+                src="https://res.cloudinary.com/bitan-atarthy/image/upload/v1629918928/esummit/prize3_kf7242.png"
+                class="w-50 mb-3"
+                alt=""
+              />
+              <h3 class="card-title mb-3 text-light">Participation<br>Certificate</h3>
+              
+              
+              
+            </div>
+          </div>
+        </div>
+
+        
+
+
+        
+      </div>
+    </div>
+  </section>
+</div> -->
+
+
+    <!-- Rewards end -->
+
+
+
+
+
+    <!-- Gallery -->
+
+    <section class=" text-light p-5 text-center text-sm-start">
+      <div class="container">
+        <h2 class="text-center mb-5 fw-bold display-5">From the <span class="text-warning">Archives</span></h2>
+
+        <div class="row">
+          <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+
+
+            <img src="../assets/images/HackNPitch/1.jpeg" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+
+            <img src="../assets/images/HackNPitch/2.jpeg" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+          </div>
+
+          <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+            <img src="../assets/images/HackNPitch/3.jpeg" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+
+            <img src="../assets/images/HackNPitch/4.jpeg" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+          </div>
+
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- FAQs -->
+
+
+
+    <section id="faqs" class="py-5 ">
+      <div class="container-md ">
+        <div class="container">
+          <h2 class="text-center mb-5 fw-bold display-5"><span class="text-warning">FAQs</span></h2>
+          <div class="row my-5 g-5 justify-content-around align-items-center">
+            <div class="col-6 col-lg-4">
+              <img src="../assets/images/HackNPitch/HackNPitch white.png" class="img-fluid" alt="ebook">
+            </div>
+            <div class="col-lg-6">
+
+              <!-- accordion -->
+              <div class="accordion" id="chapters">
+                <div class="accordion-item" style="background-color: black; color: white;">
+                  <h2 class="accordion-header" id="heading-1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-1" aria-expanded="true" aria-controls="chapter-1">
+                      How many members in a team ?
+                    </button>
+                  </h2>
+                  <div id="chapter-1" class="accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#chapters">
+                    <div class="accordion-body">
+                      <p>Teams can have a minimum of 3 members and maximum of 5 members.</p>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item" style="background-color: black; color: white;">
+                  <h2 class="accordion-header" id="heading-2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-2" aria-expanded="false" aria-controls="chapter-2">
+                      Can people participate if they're not in college ?/ Are cross college team allowed?
+                    </button>
+                  </h2>
+                  <div id="chapter-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#chapters">
+                    <div class="accordion-body">
+                      <p>Yes, all we need are teams who are enthusiastic. All team members must be either students or professionals.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item" style="background-color: black; color: white;">
+                <h2 class="accordion-header" id="heading-3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-3" aria-expanded="false" aria-controls="chapter-3">
+                    What is the venue of the competition ?
+                  </button>
+                </h2>
+                <div id="chapter-3" class="accordion-collapse collapse" aria-labelledby="heading-3" data-bs-parent="#chapters">
+                  <div class="accordion-body">
+                    <p>The hackathon will be completely online, spread across two weeks.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Form -->
+    <div>
+      <div class="container col-xl-10 col-xxl-8 px-4 py-5" style="color: white;">
+        <div class="row align-items-center g-lg-5 py-5">
+          <div class="col-lg-7 text-center text-lg-start">
+            <h1 class="display-5 fw-bold lh-1 mb-3"><span class="text-warning">Pre-</span>Register <span class="text-warning">Now!</span></h1>
+            <p class="col-lg-10 fs-4">
+              Build innovative and impactful solutions for this hackathon. No limitations on what technologies to use and what programming languages to code in.
+            </p>
+          </div>
+          <div class="col-md-10 mx-auto col-lg-5">
+
+
+            <h5 class="display-6 py-5 text-center">It's NOW or <span class="text-warning">NEVER!!!</span></h5>
+            
+            <a href="https://portal.juecell.in/" target="blank"><button class="w-100 btn btn-lg btn-warning">Pre-Register Now</button></a>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- Special Footer -->
+    <div class="container">
+      <footer class="py-5">
+
+
+        <div class="d-flex justify-content-between py-4 my-4 border-top">
+          <p class="text-light">&copy; 2021 Jadavpur University Entrepreneurship Cell. All rights reserved.</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a class="link-light" href="https://twitter.com/ju_ecell"><svg class="bi" width="24" height="24">
+                  <use xlink:href="#twitter" />
+                </svg></a></li>
+            <li class="ms-3"><a class="link-light" href="https://instagram.com/juecell"><svg class="bi" width="24" height="24">
+                  <use xlink:href="#instagram" />
+                </svg></a></li>
+            <li class="ms-3"><a class="link-light" href="https://facebook.com/juecell"><svg class="bi" width="24" height="24">
+                  <use xlink:href="#facebook" />
+                </svg></a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+      <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
+</body>
+
+</html>

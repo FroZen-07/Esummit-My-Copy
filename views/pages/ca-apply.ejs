@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>CA | JU E-Summit 2021</title>
+  <%- include('../partials/head2'); %>
+  <!-- Custom styles for this template -->
+  <link href="/assets/css/navBar.css" rel="stylesheet">
+  <link href="/assets/css/carousel.css" rel="stylesheet">
+  <link href="/assets/css/heroes.css" rel="stylesheet">
+  <link href="/assets/css/features.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-light">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NTJ8BSG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {},
+      Tawk_LoadStart = new Date();
+    (function() {
+      var s1 = document.createElement("script"),
+        s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/612891ed649e0a0a5cd33159/1fe37k2kk';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light" aria-label="Main navigation">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="../assets/images/blue_grad_logo.png" width="160" height="30" alt="">
+      </a>
+      <a href="https://portal.juecell.in/" target="blank"><button class="btn btn-outline-primary btn-sm" type="button" id="register_button" aria-label="Toggle navigation">
+          Register Now
+        </button></a>
+  </nav>
+
+  <%- include('../partials/navScroller'); %>
+
+  <%- include('../partials/svgSymbols'); %>
+
+  <main>
+
+    <div class="row flex-lg-row align-items-center g-5 py-5">
+      <!-- <div class="col-xxl-6">
+                        <img src="/assets/images/ca2.png" class="d-block mx-lg-auto img-fluid" alt="JU E-Summit'21 Logo"
+                            width="auto" loading="lazy">
+                    </div> -->
+      <div class="col-xxl-12">
+
+        <% if (isSuccess==1) { %>
+        <div id="intro" class="text-center text-success">
+          <img src="/assets/images/tick.gif"></img>
+          <p></p>
+          <h1 class="mb-3 h2">Thank You <%= name %>!</h1>
+          <p class="mb-3 text-dark">Your application has been submitted successfully. Keep
+            an eye on your mail.
+            We'll get
+            back to you soon.</p>
+        </div>
+        <% } else if (isSuccess==0) { %>
+        <div id="intro" class="text-center text-danger">
+          <img src="/assets/images/error.gif" style="height: 200px;"></img>
+          <p></p>
+          <h1 class="h2">Oops!</h1>
+          <p class="text-dark">Please fill in all fields correctly as instructed.</p>
+        </div>
+        <!-- CA Form starts -->
+        <%- include('../partials/pageEssentials/ca-full-form'); %>
+        <!-- CA Form ends -->
+
+
+        <% } else { %>
+        <!-- CA Form starts -->
+        <%- include('../partials/pageEssentials/ca-full-form'); %>
+        <!-- CA Form ends -->
+        <% } %>
+
+      </div>
+    </div>
+
+  </main>
+
+
+  <%- include('../partials/footer2'); %>
+
+  <script src="/assets/js/navBar.js"></script>
+</body>
+
+</html>
